@@ -51,6 +51,65 @@ header {
 .site-name .secondary {
     color: #ffcc00;
 }
+/* Make footer stick to bottom */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body.apply-body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Buttons on Apply Page */
+.apply-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-apply {
+    background-color: #e53935;
+    color: white;
+    padding: 14px 45px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    box-shadow: 0 6px 12px rgba(229, 57, 53, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.btn-apply:hover {
+    background-color: #c62828;
+    box-shadow: 0 8px 20px rgba(198, 40, 40, 0.5);
+}
+
+.btn-back {
+    background-color: #555;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+}
+
+.btn-back:hover {
+    background-color: #333;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
 
 /* Ensure footer is always at bottom if little content */
 html, body {
