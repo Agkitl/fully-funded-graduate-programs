@@ -1,54 +1,97 @@
-<!-- Universities Section -->
-<section class="universities">
-    <h3>Top U.S. Universities Offering Funded Programs</h3>
-    <div class="universities-grid">
-        <div class="university">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Harvard_University_logo.svg" alt="Harvard University">
-            <p>Harvard University</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fully Funded Graduate Programs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+    <div class="container">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Site Logo">
+            <span>Graduate Programs</span>
         </div>
-        <div class="university">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Stanford_University_seal_2003.svg" alt="Stanford University">
-            <p>Stanford University</p>
-        </div>
-        <div class="university">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/MIT_Seal.svg" alt="MIT">
-            <p>Massachusetts Institute of Technology (MIT)</p>
-        </div>
-        <div class="university">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/UC_Berkeley_seal.svg" alt="UC Berkeley">
-            <p>University of California, Berkeley</p>
-        </div>
-        <div class="university">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/University_of_Michigan_seal.svg" alt="University of Michigan">
-            <p>University of Michigan</p>
-        </div>
-        <div class="university">
-            <img src="https://upload.wikimedia.org/wikipedia/en/e/e9/University_of_Illinois_seal.svg" alt="University of Illinois Urbana-Champaign">
-            <p>University of Illinois Urbana-Champaign</p>
-        </div>
-        <div class="university">
-            <img src="https://upload.wikimedia.org/wikipedia/en/3/3e/Cornell_University_seal.svg" alt="Cornell University">
-            <p>Cornell University</p>
-        </div>
-        <div class="university">
-            <img src="https://upload.wikimedia.org/wikipedia/en/1/13/Carnegie_Mellon_University_seal.svg" alt="Carnegie Mellon University">
-            <p>Carnegie Mellon University</p>
-        </div>
-        <div class="university">
-            <img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Georgia_Institute_of_Technology_seal.svg" alt="Georgia Tech">
-            <p>Georgia Institute of Technology</p>
-        </div>
-        <div class="university">
-            <img src="https://upload.wikimedia.org/wikipedia/en/f/f0/Texas_A%26M_University_seal.svg" alt="Texas A&M">
-            <p>Texas A&M University</p>
-        </div>
-        <div class="university">
-            <img src="https://upload.wikimedia.org/wikipedia/en/1/19/University_of_Washington_seal.svg" alt="University of Washington">
-            <p>University of Washington</p>
-        </div>
-        <div class="university">
-            <img src="https://upload.wikimedia.org/wikipedia/en/2/25/University_of_Wisconsin_seal.svg" alt="University of Wisconsin-Madison">
-            <p>University of Wisconsin-Madison</p>
-        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Programs</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Study in the U.S. with Fully Funded Programs</h1>
+        <p>Connect with top professors and universities offering funded graduate programs through Teaching and Research Assistantships.</p>
+        <a href="enroll.html" class="btn">Enroll Now</a>
     </div>
 </section>
+
+<!-- Majors Section -->
+<section class="majors">
+    <h2>Popular Fields of Study</h2>
+    <div class="majors-grid">
+        <div class="major"><img src="https://cdn-icons-png.flaticon.com/512/2942/2942678.png" alt="">Engineering</div>
+        <div class="major"><img src="https://cdn-icons-png.flaticon.com/512/2721/2721311.png" alt="">Computer Science</div>
+        <div class="major"><img src="https://cdn-icons-png.flaticon.com/512/2972/2972242.png" alt="">Mathematics</div>
+        <div class="major"><img src="https://cdn-icons-png.flaticon.com/512/3943/3943516.png" alt="">Science</div>
+        <div class="major"><img src="https://cdn-icons-png.flaticon.com/512/2620/2620677.png" alt="">Business</div>
+        <div class="major"><img src="https://cdn-icons-png.flaticon.com/512/2784/2784445.png" alt="">Economics</div>
+    </div>
+</section>
+
+<!-- Universities Section -->
+<section class="universities">
+    <h2>Partner Universities</h2>
+    <div class="universities-grid">
+        <div class="university" onclick="showDepartments('Harvard')">
+            <img src="https://upload.wikimedia.org/wikipedia/en/2/29/Harvard_shield_wreath.svg" alt="Harvard">
+            <p>Harvard University</p>
+        </div>
+        <div class="university" onclick="showDepartments('Stanford')">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Stanford_University_seal_2003.svg" alt="Stanford">
+            <p>Stanford University</p>
+        </div>
+        <div class="university" onclick="showDepartments('MIT')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_logo.svg" alt="MIT">
+            <p>MIT</p>
+        </div>
+        <!-- Add 9 more universities the same way -->
+    </div>
+
+    <!-- Interactive Section -->
+    <div id="departments" class="departments"></div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Fully Funded Graduate Programs. All rights reserved.</p>
+</footer>
+
+<script>
+function showDepartments(university) {
+    const departments = {
+        'Harvard': ['Engineering', 'Law', 'Medicine', 'Business'],
+        'Stanford': ['Engineering', 'Computer Science', 'Education'],
+        'MIT': ['Engineering', 'Physics', 'Mathematics'],
+        // Add more universities here
+    };
+
+    const deptDiv = document.getElementById('departments');
+    if (departments[university]) {
+        deptDiv.innerHTML = `<h3>${university} Departments:</h3><ul>` +
+            departments[university].map(dep => `<li>${dep}</li>`).join('') +
+            `</ul>`;
+    } else {
+        deptDiv.innerHTML = `<p>No data available for ${university} yet.</p>`;
+    }
+}
+</script>
+
+</body>
+</html>
