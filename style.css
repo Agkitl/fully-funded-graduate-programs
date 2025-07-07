@@ -1,64 +1,33 @@
-/* Mobile-First Simple Responsive Design */
+/* Universities Section */
+.universities {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fafafa;
+}
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+.universities h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.universities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.university {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-}
-
-header {
-    background-color: #004080;
-    color: white;
-    padding: 10px;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    max-width: 120px;
 }
 
-header img {
-    height: 40px;
+.university img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
 }
-
-main {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
-}
-
-footer {
-    background-color: #f0f0f0;
-    text-align: center;
-    padding: 10px;
-}
-
-.btn, .google-btn {
-    background-color: #007BFF;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.btn:hover, .google-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Google button style */
-.google-btn {
-    background-color: #DB4437;
-}
-
-@media (min-width: 600px) {
-    main {
-        max-width: 600px;
-        margin: 0 auto;
-    }
-}
-
