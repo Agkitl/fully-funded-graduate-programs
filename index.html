@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fully Funded Graduate Programs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- Header -->
-<header class="site-header">
-    <div class="container">
+<header>
+    <div class="container header-container">
         <div class="logo">
-            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Site Logo">
-            <span>Graduate Programs</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo">
+            <span>Funded Graduate Programs</span>
         </div>
         <nav>
             <a href="#">Home</a>
@@ -26,72 +27,48 @@
 <!-- Hero Section -->
 <section class="hero">
     <div class="container">
-        <h1>Study in the U.S. with Fully Funded Programs</h1>
-        <p>Connect with top professors and universities offering funded graduate programs through Teaching and Research Assistantships.</p>
+        <h1>Study in the U.S. for Free</h1>
+        <p>We connect aspiring students with professors and universities offering fully funded master's and Ph.D. programs through Teaching and Research Assistantships.</p>
         <a href="enroll.html" class="btn">Enroll Now</a>
     </div>
 </section>
 
 <!-- Majors Section -->
-<section class="majors">
-    <h2>Popular Fields of Study</h2>
-    <div class="majors-grid">
-        <div class="major"><img src="https://cdn-icons-png.flaticon.com/512/2942/2942678.png" alt="">Engineering</div>
-        <div class="major"><img src="https://cdn-icons-png.flaticon.com/512/2721/2721311.png" alt="">Computer Science</div>
-        <div class="major"><img src="https://cdn-icons-png.flaticon.com/512/2972/2972242.png" alt="">Mathematics</div>
-        <div class="major"><img src="https://cdn-icons-png.flaticon.com/512/3943/3943516.png" alt="">Science</div>
-        <div class="major"><img src="https://cdn-icons-png.flaticon.com/512/2620/2620677.png" alt="">Business</div>
-        <div class="major"><img src="https://cdn-icons-png.flaticon.com/512/2784/2784445.png" alt="">Economics</div>
+<section class="majors container">
+    <h2>Popular Majors</h2>
+    <div class="grid">
+        <div><img src="https://cdn-icons-png.flaticon.com/512/2942/2942678.png" alt=""><p>Engineering</p></div>
+        <div><img src="https://cdn-icons-png.flaticon.com/512/2721/2721311.png" alt=""><p>Computer Science</p></div>
+        <div><img src="https://cdn-icons-png.flaticon.com/512/2972/2972242.png" alt=""><p>Mathematics</p></div>
+        <div><img src="https://cdn-icons-png.flaticon.com/512/3943/3943516.png" alt=""><p>Science</p></div>
+        <div><img src="https://cdn-icons-png.flaticon.com/512/2620/2620677.png" alt=""><p>Business</p></div>
+        <div><img src="https://cdn-icons-png.flaticon.com/512/2784/2784445.png" alt=""><p>Economics</p></div>
     </div>
 </section>
 
 <!-- Universities Section -->
-<section class="universities">
-    <h2>Partner Universities</h2>
-    <div class="universities-grid">
-        <div class="university" onclick="showDepartments('Harvard')">
-            <img src="https://upload.wikimedia.org/wikipedia/en/2/29/Harvard_shield_wreath.svg" alt="Harvard">
-            <p>Harvard University</p>
-        </div>
-        <div class="university" onclick="showDepartments('Stanford')">
-            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Stanford_University_seal_2003.svg" alt="Stanford">
-            <p>Stanford University</p>
-        </div>
-        <div class="university" onclick="showDepartments('MIT')">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_logo.svg" alt="MIT">
-            <p>MIT</p>
-        </div>
-        <!-- Add 9 more universities the same way -->
+<section class="universities container">
+    <h2>Top U.S. Universities</h2>
+    <div class="grid universities-grid">
+        <div><img src="https://upload.wikimedia.org/wikipedia/en/2/29/Harvard_shield_wreath.svg" alt=""><p>Harvard</p></div>
+        <div><img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Stanford_University_seal_2003.svg" alt=""><p>Stanford</p></div>
+        <div><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_logo.svg" alt=""><p>MIT</p></div>
+        <div><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/UC_Berkeley_seal.svg" alt=""><p>UC Berkeley</p></div>
+        <div><img src="https://upload.wikimedia.org/wikipedia/en/f/f1/University_of_Michigan_seal.svg" alt=""><p>Michigan</p></div>
+        <div><img src="https://upload.wikimedia.org/wikipedia/en/3/3e/Cornell_University_seal.svg" alt=""><p>Cornell</p></div>
+        <div><img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Georgia_Institute_of_Technology_seal.svg" alt=""><p>Georgia Tech</p></div>
+        <div><img src="https://upload.wikimedia.org/wikipedia/en/f/f0/Texas_A%26M_University_seal.svg" alt=""><p>Texas A&M</p></div>
+        <div><img src="https://upload.wikimedia.org/wikipedia/en/1/19/University_of_Washington_seal.svg" alt=""><p>Washington</p></div>
+        <div><img src="https://upload.wikimedia.org/wikipedia/en/2/25/University_of_Wisconsin_seal.svg" alt=""><p>Wisconsin</p></div>
     </div>
-
-    <!-- Interactive Section -->
-    <div id="departments" class="departments"></div>
 </section>
 
 <!-- Footer -->
 <footer>
-    <p>&copy; 2025 Fully Funded Graduate Programs. All rights reserved.</p>
+    <div class="container">
+        &copy; 2025 Fully Funded Graduate Programs. All rights reserved.
+    </div>
 </footer>
-
-<script>
-function showDepartments(university) {
-    const departments = {
-        'Harvard': ['Engineering', 'Law', 'Medicine', 'Business'],
-        'Stanford': ['Engineering', 'Computer Science', 'Education'],
-        'MIT': ['Engineering', 'Physics', 'Mathematics'],
-        // Add more universities here
-    };
-
-    const deptDiv = document.getElementById('departments');
-    if (departments[university]) {
-        deptDiv.innerHTML = `<h3>${university} Departments:</h3><ul>` +
-            departments[university].map(dep => `<li>${dep}</li>`).join('') +
-            `</ul>`;
-    } else {
-        deptDiv.innerHTML = `<p>No data available for ${university} yet.</p>`;
-    }
-}
-</script>
 
 </body>
 </html>
