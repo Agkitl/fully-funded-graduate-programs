@@ -16,24 +16,22 @@ body {
 header {
     background-color: #004080;
     color: white;
-    padding: 20px 0;
+    padding: 20px 0 10px;
     box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    text-align: center;
 }
 
 .site-name {
     font-size: 1.6rem;
     font-weight: 700;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 5px;
-    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .site-name .primary {
@@ -42,6 +40,13 @@ header {
 
 .site-name .secondary {
     color: #ffcc00;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .header-link {
@@ -69,7 +74,7 @@ header {
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     text-align: center;
     max-width: 800px;
-    margin: auto;
+    margin: 0 auto 30px;
 }
 
 .intro-box p {
@@ -131,6 +136,7 @@ h2 {
 .apply-container {
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .btn-apply {
