@@ -19,6 +19,53 @@ header {
     padding: 20px 0 10px;
     box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
+/* Apply Page Adjustments */
+.apply-page {
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+/* Sign In button (reusing .btn-apply) */
+.btn-apply {
+    background-color: #e53935;
+    color: white;
+    padding: 14px 45px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    box-shadow: 0 6px 12px rgba(229, 57, 53, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-apply:hover {
+    background-color: #c62828;
+    box-shadow: 0 8px 20px rgba(198, 40, 40, 0.5);
+}
+
+/* Header styles for this page */
+.site-name .primary {
+    color: white;
+}
+
+.site-name .secondary {
+    color: #ffcc00;
+}
+
+/* Ensure footer is always at bottom if little content */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
 
 .header-container {
     text-align: center;
